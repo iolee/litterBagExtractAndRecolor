@@ -53,8 +53,11 @@ Clone the repository (if applicable) or download the source files.
 Install dependencies:
 
 pip install rembg opencv-python numpy ultralytics
+
 Usage
+
 Step 1: Extraction (BagExtract.py)
+
 This script combines a pre-trained background removal model with specific annotation data to create a clean cutout of the bag.
 
 Place your input image as original_bag.png in the root directory.
@@ -62,6 +65,7 @@ Place your input image as original_bag.png in the root directory.
 Run the script:
 
 python BagExtract.py
+
 Process:
 
 The script first uses rembg to remove the general background.
@@ -75,6 +79,7 @@ It looks for Category ID 1 ("circle") annotations and subtracts (removes) that a
 Output: The script generates bag_clean.png.
 
 Step 2: Recoloring (Recolor.py)
+
 This script applies color adjustments to the extracted image.
 
 Ensure bag_clean.png exists (created by the previous step).
@@ -82,9 +87,11 @@ Ensure bag_clean.png exists (created by the previous step).
 Run the script:
 
 python Recolor.py
+
 Output: The final recolored image will be saved (e.g., bag_recolored.png).
 
 Configuration
+
 Category IDs: The extraction script is hardcoded to look for specific IDs in the JSON file:
 
 BAG_ID = 2
