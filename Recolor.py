@@ -5,7 +5,7 @@ import os
 
 # ==== setup ====
 BAG_PATH = os.path.join(os.path.dirname(__file__), 'bag_clean.png')  # clean background
-TARGET_HEX = '#RRGGBB'  # recolor, put in the HEX code denote to your favorate color
+TARGET_HEX = '#RRGGBB'  # recolor, put in the HEX code, denote your favorite color
 OUT_WIDTH, OUT_HEIGHT = 1600, 1600  # size
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), f'{TARGET_HEX}.png')
 
@@ -57,3 +57,4 @@ canvas = canvas.astype(np.uint8)
 # save
 cv2.imwrite(OUTPUT_PATH, canvas)
 print(f"saved to: {OUTPUT_PATH}")
+
