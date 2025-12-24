@@ -1,22 +1,6 @@
 Cat Litter Bag Extraction and Recoloring
 This project automates the process of extracting a specific object (a cat litter bag) from an image using instance segmentation and then recoloring it. It utilizes a pre-trained YOLOv8 model for initial detection, refined by specific polygon annotations, and a recoloring script for post-processing.
 
-Table of Contents
-Overview
-
-Prerequisites
-
-File Structure
-
-Installation
-
-Usage
-
-Step 1: Extraction
-
-Step 2: Recoloring
-
-Configuration
 
 Overview
 This toolchain consists of two main scripts:
