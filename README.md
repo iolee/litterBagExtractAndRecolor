@@ -26,12 +26,19 @@ File Structure
 Ensure your project directory is organized as follows:
 
 .
+
 ├── BagExtract.py            # Script to extract the bag and remove background
+
 ├── Recolor.py               # Script to recolor the extracted bag
+
 ├── instances_default.json   # COCO-format annotations for segmentation coordinates
+
 ├── yolov8s-seg.pt           # Pre-trained YOLOv8 segmentation model weights
+
 ├── original_bag.png         # Input image to be processed
+
 └── README.md                # Project documentation
+
 Note on Data Files:
 
 
