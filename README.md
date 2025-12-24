@@ -9,8 +9,10 @@ BagExtract.py: Removes the background from an input image (original_bag.png). It
 
 Recolor.py: Takes the clean, extracted image (bag_clean.png) and applies a color transformation to change the bag's appearance.
 
+
 Prerequisites
 Python 3.8+
+
 
 Required Python Libraries:
 
@@ -21,6 +23,7 @@ opencv-python (cv2)
 numpy
 
 ultralytics (for YOLOv8 model handling)
+
 
 File Structure
 Ensure your project directory is organized as follows:
@@ -39,6 +42,7 @@ Ensure your project directory is organized as follows:
 
 └── README.md                # Project documentation
 
+
 Note on Data Files:
 
 
@@ -48,11 +52,15 @@ yolov8s-seg.pt: This is the weights file for the YOLOv8 small segmentation model
 instances_default.json: This JSON file contains the specific polygon coordinates for the image. It defines two categories: ID 1 (circle) and ID 2 (bag). The script uses these exact coordinates to create the final mask.
 
 Installation
+
 Clone the repository (if applicable) or download the source files.
+
 
 Install dependencies:
 
 pip install rembg opencv-python numpy ultralytics
+
+
 
 Usage
 
@@ -76,7 +84,10 @@ It masks the image to keep only the bag.
 
 It looks for Category ID 1 ("circle") annotations and subtracts (removes) that area from the mask.
 
-Output: The script generates bag_clean.png.
+Output: 
+
+The script generates bag_clean.png.
+
 
 Step 2: Recoloring (Recolor.py)
 
@@ -88,7 +99,11 @@ Run the script:
 
 python Recolor.py
 
-Output: The final recolored image will be saved (e.g., bag_recolored.png).
+Output: 
+
+The final recolored image will be saved (e.g., bag_recolored.png).
+
+
 
 Configuration
 
@@ -96,6 +111,12 @@ Category IDs: The extraction script is hardcoded to look for specific IDs in the
 
 BAG_ID = 2
 
-CIRCLE_ID = 1 If your instances_default.json uses different IDs, update these constants in BagExtract.py.
+CIRCLE_ID = 1 
 
-Segmentation Coordinates: The instances_default.json file contains hardcoded coordinates specific to original_bag.png. If you use a different input image, you must generate a new JSON annotation file with the correct polygon points for that new image.
+If your instances_default.json uses different IDs, update these constants in BagExtract.py.
+
+
+
+Segmentation Coordinates: 
+
+The instances_default.json file contains hardcoded coordinates specific to original_bag.png. If you use a different input image, you must generate a new JSON annotation file with the correct polygon points for that new image.
