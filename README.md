@@ -68,10 +68,17 @@ BAG_ID = 2
 CIRCLE_ID = 1
 ```
 Image Specificity
+
 The instances_default.json file contains hardcoded coordinates specific to the dimensions and content of original_bag.png.
+
 Constraint: You cannot simply swap the input image without also providing a new JSON file containing the correct polygon points for the new image.
+
 Technologies Used
+
 Python 3.x
+
 Ultralytics YOLOv8: For model handling and inference structure.
+
 Rembg: For salient object background removal.
+
 OpenCV (cv2) & NumPy: For masking logic, polygon drawing, and color space manipulation.
